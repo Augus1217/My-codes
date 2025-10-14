@@ -29,7 +29,7 @@ int main()
                                 c[j]=c[j]+c[j].substr(0, x[i][j]);
                                 c[j].erase(0,x[i][j]);
                         }
-                         else if(x[i].at(j)<0){
+                        else if(x[i].at(j)<0){
                                 c[j]=c[j].substr(x[i][j],l[j].size()-1)+c[j];
                                 c[j].erase(x[i][j],c[j].size()-1);
                         }
