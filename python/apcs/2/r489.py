@@ -28,6 +28,7 @@ if r==c:
                 cnt+=1
     if mxcnt<cnt:
         mxcnt=cnt
+cnt=0
 for i in range(r):
     for j in range(c):
         if l1[r-1-i][c-1-j]==l2[i][j]:
