@@ -1,7 +1,10 @@
 k=int(input())
 l=[]
 for i in range(k):
+    a=input().split()
     l.append([])
-    inpt=input()
-    for j in range(0,int(inpt[0])*4,4):
-        l[i].append(inpt[j+2:j+5].split())
+    for j in range(1, int(a[0])*2+1, 2):
+        l[i].append([a[j], a[j+1]])
+while True:
+    
+print(l)        

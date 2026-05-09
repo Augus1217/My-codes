@@ -11,9 +11,10 @@ cpp/
   apcs/      # APCS problems in C++
   zj/        # ZeroJudge problems in C++
 python/
-  apcs/      # APCS problems in Python (organized by difficulty/category)
-    1/       # Primary APCS solutions
-    2/       # Secondary APCS solutions
+  apcs/      # APCS problems in Python (organized by exam question number/difficulty)
+    1/       # APCS Q1 solutions (Primary difficulty)
+    2/       # APCS Q2 solutions (Intermediate)
+    3/       # APCS Q3 solutions (Advanced)
   apcs-simu/ # APCS simulation contest problems
 ```
 
@@ -23,11 +24,13 @@ python/
 - Files are named by problem ID (e.g., `b964.cpp`, `c462.py`, `a001.cpp`)
 - Each problem has its own directory: `<problem-id>/<problem-id>.<ext>`
 - Both languages may have solutions to the same problem (e.g., `apcs/b964/b964.cpp` and `apcs/1/b964.py`)
+- Alternative algorithmic approaches for C++ are suffixed with `-2` (e.g., `k731-2.cpp`).
 
 ### Python Style
 - **Compact, competition-focused code**: prioritize brevity over readability
 - **List comprehensions**: heavily used for input parsing and transformations
   - Example: `l=[int(x) for x in input().split()]`
+- **Code Navigation headers**: Use `#@title` for problem titles and descriptions (e.g., `#@title e287. 機器人的路徑`)
 - **No imports unless necessary**: most solutions use built-in functions only
 - **Direct I/O**: use `input()` and `print()` without wrapper functions
 - **Variable names**: short names (`l`, `n`, `k`, `s`) are standard
@@ -67,6 +70,7 @@ int main(){
 Use the configured VS Code task: "C/C++: g++ build active file"
 - Compiles with: `g++ -fdiagnostics-color=always -g <file> -o <output>`
 - Working directory: same as source file
+- Binaries are output to and co-located in the same directory as the source file without extensions (e.g. `m370/m370`)
 - Run: `./<filename>` in the same directory
 
 ### Python
