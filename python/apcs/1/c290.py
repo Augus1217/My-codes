@@ -1,4 +1,4 @@
-l=[int(x) for x in input()]
-odd=sum([l[i] for i in range(1,len(l),2)])
-even=sum([l[i] for i in range(0,len(l),2)])
-print(abs(odd-even))
+n=input()
+o=sum([int(x) for x in n[::2]])
+e=sum([int(x) for x in n[1::2]])
+print(abs(o-e))

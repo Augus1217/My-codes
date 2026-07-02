@@ -1,17 +1,12 @@
 n=int(input())
 l=sorted([int(x) for x in input().split()])
+high="worst case"
+low="best case"
+for i in range(n):
+    if l[i]>=60:
+        high=l[i]
+        break
+    elif l[i]<60:
+        low=l[i]
 print(*l)
-if min(l)>=60:
-    print('best case')
-else:
-    for i in range(len(l)-1,-1,-1):
-        if l[i]<60:
-            print(l[i])
-            break
-if max(l)<60:
-    print('worst case')
-else:
-    for i in range(len(l)):
-        if l[i]>=60:
-            print(l[i])
-            break
+print(low,high,sep="\n")

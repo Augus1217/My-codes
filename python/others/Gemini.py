@@ -9,7 +9,7 @@ def inpt():
     
     if user_input == '雞翅好吃嗎？':
         time.sleep(0.5)
-        print('\nGemini：\n')
+        print('\nGemini:\n')
         time.sleep(0.5)
         print("thinking...")
         print("使用者詢問我雞翅好不好吃，我的答案是肯定的。雞翅非常好吃。")
@@ -30,7 +30,7 @@ def inpt():
 
     else:
         time.sleep(0.5)
-        print('Model：\n')
+        print('Gemini:\n')
         time.sleep(0.5)
         
         # 模擬不知道的回答
