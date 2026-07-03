@@ -1,5 +1,12 @@
-n=int(input())
-f=[int(x) for x in input().split()]
-l=range(n)
-d={f.index(i):i for i in f}
-num=0
+n = int(input())
+fl = [int(x) for x in input().split()]
+visited = [False] * n
+cnt = 0
+for i in range(n):
+    if not visited[i]:
+        cnt += 1
+        curr = i
+        while not visited[curr]:
+            visited[curr] = True
+            curr = fl[curr]
+print(cnt)
